@@ -1,7 +1,23 @@
 <html>
   <head></head>
   <body>
-    <p>Belajar templating dengan flask</p>
-    <p>nilai saya adalah : <strong> {{ value }}</strong></p>
+    <div>
+      {% for data in value %}
+      <li>{{ data }}</li>
+      {% endfor %}
+    </div>
+    <div>
+      {% if suasana == "senang"%}
+      <p>Dia juga sanang</p>
+      {% elif suasana == "sedih" %}
+      <p>Dia juga sedih</p>
+      {% else %}
+      <p>dia sedih</p>
+      {% endif %}
+    </div>
+    <div>
+        {% set hari = "jumat berkah" %}    
+        <p> {{ hari }} </p>
+    <div>
   </body>
 </html>
